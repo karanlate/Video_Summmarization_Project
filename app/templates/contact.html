@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/video-marketing.png') }}">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet"
+      href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <!-- AOS  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<body onload="loader()">
+  <div id="loading"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- With logo <img class="hero-img" src="logo.png" alt="img-project-logo" style="max-width: 200px; max-height: 32px; margin-left: -10px; ">-->
+    <!-- With name --><a class="navbar-brand" href="{{ url_for('main.home') }}">Video <span class="loogo">Summarization</span></a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.home') }}">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('main.contact') }}">Contact<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.about') }}">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <link rel="stylesheet" href="static\css\contact.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Whether you're interested in collaborating, providing input, or simply want to learn more, don't hesitate to contact us. We're here to support your video summarization needs and welcome your inquiries.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <div class="loc-icon">
+                <i class="fa-solid fa-location-pin"></i>
+              </div>
+              <p>1186/A, Off J.M. Road, Shivaji nagar, Modern Engineering College Rd, Shivajinagar, Pune, Maharashtra 411005</p>
+            </div>
+            <div class="information">
+              <div class="email-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <p>pesmcoe@moderncoe.edu.in</p>
+            </div>
+            <div class="information">
+              <div class="phone-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <p>(020) 25533638, 25533648.</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="hidden" name="access_key" value="4ece327c-e3ef-44dc-a666-3c7406ee3a22">
+              <input type="text" name="name" class="input" placeholder="Username"/>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" placeholder="Email"/>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" placeholder="Phone No"/>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" placeholder="Message"></textarea>
+              <span>Message</span>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
