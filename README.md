@@ -1,5 +1,5 @@
 # Video Summarization Project
-huhuhhhu
+
 This project allows users to upload videos or provide video URLs, which are then processed to generate a textual summary. The algorithmic approach involves video preprocessing, feature extraction, temporal summarization, content clustering, summary length control, and summary generation.
 
 ## Table of Contents
